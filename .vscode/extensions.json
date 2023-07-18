@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "mikestead.dotenv",
     "yoavbls.pretty-ts-errors",
-    "Orta.vscode-jest"
+    "Orta.vscode-jest",
+    "Prisma.prisma"
   ]
 }

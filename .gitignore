@@ -23,8 +23,8 @@ lerna-debug.log*
 .project
 .classpath
 .c9/
-*.launch
 .settings/
+*.launch
 *.sublime-workspace
 
 # IDE - VSCode
@@ -33,3 +33,6 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Misc
+.env
