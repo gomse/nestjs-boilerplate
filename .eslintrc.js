@@ -12,9 +12,9 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
+    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
     'airbnb-typescript/base',
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
   ignorePatterns: ['.eslintrc.js'],
@@ -31,6 +31,14 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'import/prefer-default-export': 'off',
+    'import/extensions': {
+      'error',
+      'ignorePackages',
+      {
+        ts: 'never',
+        js: 'never',
+      }
+    },
     'import/order': [
       'error',
       {
@@ -39,7 +47,9 @@ module.exports = {
           'builtin',
           'external',
           'internal',
-          ['parent', 'sibling', 'index'],
+          'parent',
+          'sibling',
+          'index',
           'type',
           'unknown',
         ],
