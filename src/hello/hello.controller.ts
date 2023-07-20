@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+
 import { HelloService } from './hello.service';
 
 @Controller('hello')
@@ -7,6 +8,6 @@ export class HelloController {
 
   @Get()
   async getHello() {
-    return this.helloService.test();
+    return this.helloService.world();
   }
 }
