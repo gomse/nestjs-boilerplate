@@ -1,8 +1,12 @@
-import { ValidationPipe, VersioningType } from '@nestjs/common';
+import {
+  ValidationPipe,
+  VersioningType,
+  VERSION_NEUTRAL,
+} from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 
-import { setupSwagger } from '@/utils/swagger';
+import { setupSwagger } from '@/libs/utils/swagger.util';
 
 import { AppModule } from './app.module';
 
@@ -24,7 +28,7 @@ async function bootstrap() {
   // Versioning
   app.enableVersioning({
     type: VersioningType.URI,
-    defaultVersion: '1',
+    defaultVersion: VERSION_NEUTRAL,
   });
 
   // class-validator & class-transformer
